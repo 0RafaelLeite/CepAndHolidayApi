@@ -1,6 +1,6 @@
 ﻿namespace CepAndHoliday.Models
 {
-    public class CepModel
+    public class Cep
     {
         public string Cep { get; set; }
         public string Logradouro { get; set; }

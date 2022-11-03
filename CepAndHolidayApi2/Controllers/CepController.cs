@@ -14,10 +14,10 @@ namespace CepAndHoliday.Controllers
     public class CepController : ControllerBase
     {
         [HttpGet(Name = "GetAddress")]
-        public async Task<CepModel> GetAsync(string cep)
+        public async Task<Cep> GetAsync(string cep)
         {
             HttpClient client = new HttpClient { BaseAddress = new Uri("https://viacep.com.br/ws/") };
-                var dados = await client.GetFromJsonAsync<CepModel>($"{cep}/json/");
+                var dados = await client.GetFromJsonAsync<Cep>($"{cep}/json/");
                 return dados;
         }
     }
